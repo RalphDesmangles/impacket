@@ -112,8 +112,8 @@ class TSCH_EXEC:
         dce.connect()
         dce.set_auth_level(RPC_C_AUTHN_LEVEL_PKT_PRIVACY)
         dce.bind(tsch.MSRPC_UUID_TSCHS)
-        tmpName = ''.join([random.choice(string.ascii_letters) for _ in range(8)])
-        tmpFileName = tmpName + '.tmp'
+        tmpName = ''.join([random.choice(string.ascii_letters) for _ in range(12)])
+        tmpFileName = tmpName + '.log'
 
         if self.sessionId is not None:
             cmd, args = cmd_split(self.__command)
@@ -125,7 +125,7 @@ class TSCH_EXEC:
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <Triggers>
     <CalendarTrigger>
-      <StartBoundary>2015-07-15T20:35:13.2757294</StartBoundary>
+      <StartBoundary>2024-07-15T20:35:13.2757294</StartBoundary>
       <Enabled>true</Enabled>
       <ScheduleByDay>
         <DaysInterval>1</DaysInterval>
